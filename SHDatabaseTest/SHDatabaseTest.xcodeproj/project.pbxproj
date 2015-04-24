@@ -14,6 +14,9 @@
 		E425940A1AEABC5C0013E537 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42594091AEABC5C0013E537 /* Images.xcassets */; };
 		E425940D1AEABC5C0013E537 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E425940B1AEABC5C0013E537 /* LaunchScreen.xib */; };
 		E42594191AEABC5C0013E537 /* SHDatabaseTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E42594181AEABC5C0013E537 /* SHDatabaseTestTests.m */; };
+		E42594271AEABE210013E537 /* SHDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E42594241AEABE210013E537 /* SHDatabase.m */; };
+		E42594281AEABE210013E537 /* SHResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E42594261AEABE210013E537 /* SHResultSet.m */; };
+		E425942A1AEABE5E0013E537 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E42594291AEABE5E0013E537 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		E42594121AEABC5C0013E537 /* SHDatabaseTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHDatabaseTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42594171AEABC5C0013E537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42594181AEABC5C0013E537 /* SHDatabaseTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDatabaseTestTests.m; sourceTree = "<group>"; };
+		E42594231AEABE210013E537 /* SHDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDatabase.h; sourceTree = "<group>"; };
+		E42594241AEABE210013E537 /* SHDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDatabase.m; sourceTree = "<group>"; };
+		E42594251AEABE210013E537 /* SHResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHResultSet.h; sourceTree = "<group>"; };
+		E42594261AEABE210013E537 /* SHResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHResultSet.m; sourceTree = "<group>"; };
+		E42594291AEABE5E0013E537 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E425942A1AEABE5E0013E537 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		E42593F01AEABC5C0013E537 = {
 			isa = PBXGroup;
 			children = (
+				E42594291AEABE5E0013E537 /* libsqlite3.0.dylib */,
+				E42594221AEABD400013E537 /* SHDatabase */,
 				E42593FB1AEABC5C0013E537 /* SHDatabaseTest */,
 				E42594151AEABC5C0013E537 /* SHDatabaseTestTests */,
 				E42593FA1AEABC5C0013E537 /* Products */,
@@ -117,6 +128,17 @@
 				E42594171AEABC5C0013E537 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E42594221AEABD400013E537 /* SHDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				E42594231AEABE210013E537 /* SHDatabase.h */,
+				E42594241AEABE210013E537 /* SHDatabase.m */,
+				E42594251AEABE210013E537 /* SHResultSet.h */,
+				E42594261AEABE210013E537 /* SHResultSet.m */,
+			);
+			name = SHDatabase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42594051AEABC5C0013E537 /* ViewController.m in Sources */,
+				E42594281AEABE210013E537 /* SHResultSet.m in Sources */,
 				E42594021AEABC5C0013E537 /* AppDelegate.m in Sources */,
 				E42593FF1AEABC5C0013E537 /* main.m in Sources */,
+				E42594271AEABE210013E537 /* SHDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
