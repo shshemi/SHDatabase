@@ -1,5 +1,5 @@
 Hi
-SHDatabase is library written in Objective-C that lets you use sqlite database in convenient way.By using SHDatabase you’r no longer suppose to work with C library and function.Just drag and drop the SHDatabase and add “libsqlite3.0.dylib” to your project and your ready to take off.
+SHDatabase is library written in Objective-C that lets you use sqlite database in convenient way.By using SHDatabase you’r no longer suppose to work with C library.Just drag and drop the SHDatabase and add “libsqlite3.0.dylib” to your project and your ready to take off!
 The example project that might help you understand how does the SHDatabase works, is also available to you .
 You can create a sqlite database in memory by using:
 
