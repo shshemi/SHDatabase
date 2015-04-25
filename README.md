@@ -11,7 +11,7 @@ or
 
     SHDatabase *db = [SHDatabase copyAndOpenDatabaseFromMainBundleWithName:@"MyDatabase" andExtention:@“db"];
 You can also open a managed database!
-A managed database is a database that SHDatabase handle the creating and opening for you, All you have to do is open it with just a name.
+A managed database is a database that SHDatabase handles the creating and opening for you all the time and you can focus on your applications logic, All you have to do is open it with just a name.
 You can open a managed database by using:
 
     SHDatabase *db = [SHDatabase openOrCreateManagedDatabaseWithName:@"MyManagedDatabase" andInitBlock:^(SHDatabase *db) {
