@@ -68,6 +68,6 @@ Or just use columnCount property on ResultSet
 You can get the current row (record) dictionary by using:
 
     NSDictionary *dictionary = [resultSet dictionaryForCurrentRow];
-You can use the dictionary to create json or passing to a server
+You can use the dictionary to create json or pass to a server
 
 Thanks for using SHDatabase
