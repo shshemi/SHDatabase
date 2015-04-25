@@ -62,7 +62,7 @@ You can get name of each column by using:
 You can get number of column by using:
 
     int columnCount = [resultSet columnCount];
-Or just use columnCount property on ResultSet
+Or just use columnCount property on ResultSet like this:
 
     int columnCount = resultSet.columnCount;
 You can get the current row (record) dictionary by using:
