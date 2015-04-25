@@ -19,9 +19,6 @@
     [super viewDidLoad];
     [self initDatabase];
 }
--(void)initDatabase{
-    
-}
 #pragma mark - UITextFieldDelegate
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{

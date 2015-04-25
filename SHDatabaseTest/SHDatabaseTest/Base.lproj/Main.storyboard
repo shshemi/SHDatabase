@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hvr-Bs-bS8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--BaseSQL View Controller-->
+        <!--Managed Database-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BaseSQLViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ManagedSQLViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -28,7 +28,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="DbR-oK-8vH"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJ3-QN-RhA">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJ3-QN-RhA">
                                 <rect key="frame" x="16" y="58" width="568" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -46,6 +46,7 @@
                             <constraint firstItem="aJ3-QN-RhA" firstAttribute="top" secondItem="Dui-3y-h4L" secondAttribute="bottom" constant="8" id="zgp-c6-SFT"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Managed Database" id="ozW-IG-9Nf"/>
                     <connections>
                         <outlet property="commandTextField" destination="Dui-3y-h4L" id="YLd-Y1-AVM"/>
                         <outlet property="resultTextView" destination="aJ3-QN-RhA" id="XLq-JS-nOd"/>
@@ -53,6 +54,129 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1408" y="409"/>
+        </scene>
+        <!--In Memory-->
+        <scene sceneID="VVI-9I-nIn">
+            <objects>
+                <viewController id="egB-NC-c9A" customClass="InMemorySQLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qya-gt-LAc"/>
+                        <viewControllerLayoutGuide type="bottom" id="7nN-xU-6aV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="50J-kI-srQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM memory_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-Le-4lD">
+                                <rect key="frame" x="16" y="20" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dr8-4Q-YhB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="egB-NC-c9A" id="GOE-LF-lbB"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsP-pS-HzO">
+                                <rect key="frame" x="16" y="58" width="568" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EsP-pS-HzO" firstAttribute="trailing" secondItem="50J-kI-srQ" secondAttribute="trailingMargin" id="73P-ZF-gRB"/>
+                            <constraint firstItem="7nN-xU-6aV" firstAttribute="top" secondItem="EsP-pS-HzO" secondAttribute="bottom" constant="20" id="H9a-Wp-m5S"/>
+                            <constraint firstItem="9W1-Le-4lD" firstAttribute="trailing" secondItem="50J-kI-srQ" secondAttribute="trailingMargin" id="OOp-pV-WvR"/>
+                            <constraint firstItem="9W1-Le-4lD" firstAttribute="top" secondItem="qya-gt-LAc" secondAttribute="bottom" id="V7L-vF-qFx"/>
+                            <constraint firstItem="EsP-pS-HzO" firstAttribute="leading" secondItem="50J-kI-srQ" secondAttribute="leadingMargin" id="ZHs-gy-WgY"/>
+                            <constraint firstItem="9W1-Le-4lD" firstAttribute="leading" secondItem="50J-kI-srQ" secondAttribute="leadingMargin" id="liJ-Oq-KWo"/>
+                            <constraint firstItem="EsP-pS-HzO" firstAttribute="top" secondItem="9W1-Le-4lD" secondAttribute="bottom" constant="8" id="xGE-LP-p5x"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="In Memory" id="xk0-Ly-udI"/>
+                    <connections>
+                        <outlet property="commandTextField" destination="9W1-Le-4lD" id="YEc-qs-Ixx"/>
+                        <outlet property="resultTextView" destination="EsP-pS-HzO" id="Uo2-3B-STt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6l-Ro-FH6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="-356"/>
+        </scene>
+        <!--Main Bundle-->
+        <scene sceneID="Iuh-eb-Ftz">
+            <objects>
+                <viewController id="xZU-TT-OfO" customClass="MainBundleSQLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ywu-j7-QcY"/>
+                        <viewControllerLayoutGuide type="bottom" id="wdu-Xj-EDv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IUZ-ej-PGK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM memory_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-YE-muD">
+                                <rect key="frame" x="16" y="20" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BoV-YU-sSg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xZU-TT-OfO" id="2Wx-39-YNA"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-A8-gAI">
+                                <rect key="frame" x="16" y="58" width="568" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sOC-A8-gAI" firstAttribute="trailing" secondItem="IUZ-ej-PGK" secondAttribute="trailingMargin" id="GnO-QW-ZzE"/>
+                            <constraint firstItem="hu7-YE-muD" firstAttribute="top" secondItem="ywu-j7-QcY" secondAttribute="bottom" id="KSr-2F-0Mi"/>
+                            <constraint firstItem="hu7-YE-muD" firstAttribute="leading" secondItem="IUZ-ej-PGK" secondAttribute="leadingMargin" id="S6v-ji-4cm"/>
+                            <constraint firstItem="wdu-Xj-EDv" firstAttribute="top" secondItem="sOC-A8-gAI" secondAttribute="bottom" constant="20" id="axj-af-gsb"/>
+                            <constraint firstItem="hu7-YE-muD" firstAttribute="trailing" secondItem="IUZ-ej-PGK" secondAttribute="trailingMargin" id="be6-v7-URd"/>
+                            <constraint firstItem="sOC-A8-gAI" firstAttribute="leading" secondItem="IUZ-ej-PGK" secondAttribute="leadingMargin" id="kef-vf-QYp"/>
+                            <constraint firstItem="sOC-A8-gAI" firstAttribute="top" secondItem="hu7-YE-muD" secondAttribute="bottom" constant="8" id="rCu-6r-8e7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main Bundle" id="AJr-ul-fX5"/>
+                    <connections>
+                        <outlet property="commandTextField" destination="hu7-YE-muD" id="Qwe-JG-jc4"/>
+                        <outlet property="resultTextView" destination="sOC-A8-gAI" id="ucW-BS-5WN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCl-eq-aa3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="1128"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="A5u-d5-Z7Y">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Hvr-Bs-bS8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="dZi-EQ-rTB">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="egB-NC-c9A" kind="relationship" relationship="viewControllers" id="vYI-em-OvT"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="kq0-Q8-rG4"/>
+                        <segue destination="xZU-TT-OfO" kind="relationship" relationship="viewControllers" id="hQy-LW-2VO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qz3-kr-7Vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="386"/>
         </scene>
     </scenes>
 </document>
