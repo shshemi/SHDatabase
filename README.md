@@ -40,16 +40,22 @@ You can access proper coulmn type like this:
 
     // String
     NSString *string = [resultSet stringForColumnIndex:index];
+        
     // Integer
     int integer = [resultSet intForColumnIndex:index];
+     
     // Long
     long long longInteger = [resultSet longForColumnIndex:index];
+     
     // Double
     double decimal = [resultSet doubleForColumnIndex:index];
+     
     // Blob
     NSData *data = [resultSet dataForColumnIndex:index];
+     
     // id
     id unknownTyped = [resultSet valueForColumnIndex:index];
+    
 You can get name of each column by using:
 
     NSString *columnName = [resultSet columnNameForColumnIndex:index];
