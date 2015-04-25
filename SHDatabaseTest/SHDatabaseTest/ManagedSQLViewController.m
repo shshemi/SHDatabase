@@ -20,11 +20,12 @@
 }
 -(void)initDatabase{
     self.database = [SHDatabase openOrCreateManagedDatabaseWithName:@"MyManagedDatabase" andInitBlock:^(SHDatabase *db) {
-        [self.database execute:@"CREATE TABLE sql_table (id integer PRIMARY KEY NOT NULL,name TEXT)"];
-        [self.database execute:@"INSERT INTO sql_table(id,name)VALUES(1,'Shayan')"];
-        [self.database execute:@"INSERT INTO sql_table(id,name)VALUES(2,'Ali')"];
-        [self.database execute:@"INSERT INTO sql_table(id,name)VALUES(3,'Hassan')"];
-        [self.database execute:@"INSERT INTO sql_table(id,name)VALUES(4,'Hossein')"];
+        [db execute:@"CREATE TABLE sql_table (id integer PRIMARY KEY NOT NULL,name TEXT)"];
+        [db execute:@"INSERT INTO sql_table(id,name)VALUES(1,'Shayan')"];
+        [db execute:@"INSERT INTO sql_table(id,name)VALUES(2,'Ali')"];
+        [db execute:@"INSERT INTO sql_table(id,name)VALUES(3,'Hassan')"];
+        [db execute:@"INSERT INTO sql_table(id,name)VALUES(4,'Hossein')"];
+        NSLog(@"Managed database created");
     }];
 }
 @end

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM memory_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dui-3y-h4L">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM sql_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dui-3y-h4L">
                                 <rect key="frame" x="16" y="20" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Klg-e7-gc7"/>
@@ -68,7 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM memory_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-Le-4lD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM sql_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-Le-4lD">
                                 <rect key="frame" x="16" y="20" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="dr8-4Q-YhB"/>
@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM memory_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-YE-muD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SELECT * FROM sql_table" borderStyle="roundedRect" placeholder="Type your sql command here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-YE-muD">
                                 <rect key="frame" x="16" y="20" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BoV-YU-sSg"/>

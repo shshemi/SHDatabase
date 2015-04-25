@@ -66,7 +66,7 @@ typedef void(^SHDatabaseInitBlock)(SHDatabase* db);
  *  Same as openOrCreateDatabaseWithPath: but it let you run code at init (creating) time of database to create your tables and insert needed rows
  *
  *  @param name  Name of managed database
- *  @param block SHDatabaseInitBlock the runs at init time of database
+ *  @param block SHDatabaseInitBlock the runs at init time of database,DO NOT forget to use the SHDatabase instance object in block otherwise your database will not initialize 
  *
  *  @return An OPENED database object connected to managed database
  */
