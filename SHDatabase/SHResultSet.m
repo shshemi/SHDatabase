@@ -46,6 +46,31 @@
 -(long long)longForColumnIndex:(int)columnIndex{
     return sqlite3_column_int64(statement, columnIndex);
 }
+-(NSDictionary*)dictionaryForCurrentRow{
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    for (int i=0; i<[self columnCount]; i++) {
+        id value = [self valueForColumnIndex:i];
+        NSString *key = [self columnNameForColumnIndex:i];
+        [dictionary setValue:value forKey:key];
+    }
+    return [NSDictionary dictionaryWithDictionary:dictionary];
+}
+
+-(id)valueForColumnIndex:(int)columnIndex{
+    SHSqliteColumnType columnType = [self columnTypeForColumnIndex:columnIndex];
+    switch (columnType) {
+        case kSHSqliteColumnTypeBlob:
+            return [self dataForColumnIndex:columnIndex];
+        case kSHSqliteColumnTypeFloat:
+            return [NSNumber numberWithDouble:[self doubleForColumnIndex:columnIndex]];
+        case kSHSqliteColumnTypeInteger:
+            return [NSNumber numberWithInt:[self intForColumnIndex:columnIndex]];
+        case kSHSqliteColumnTypeText:
+            return [self stringForColumnIndex:columnIndex];
+        default:
+            return @"null";
+    }
+}
 
 #pragma mark - Column name and type
 -(int)columnTypeForColumnIndex:(int)columnIndex{
