@@ -6,6 +6,7 @@ Drag and drop the SHDatabase.
 Add “libsqlite3.0.dylib” to your project.
 Now your ready to take off!
 <br/>
+<h3>Getting Started With Classes and Methods</h3>
 The example project that might help you understand how does the SHDatabase works. Some method and simple examples are also available here:
 
 <h3>In Memory Database</h3>
