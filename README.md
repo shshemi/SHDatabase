@@ -19,7 +19,7 @@ You can open a pre filled database directly in main bundle by using:
 or you can use the following line to copy it to app directory and then open it:
 
     SHDatabase *db = [SHDatabase copyAndOpenDatabaseFromMainBundleWithName:@"MyDatabase" andExtention:@“db"];
-<b>NOTE:</b>You cant change the database in main bundle, The main bundle directory is read only.
+<b>NOTE:</b> You cant change the database in main bundle, The main bundle directory is read only.
 <h3>Managed Database</h3>
 You can also try a managed database!<br/>
 A Managed Database is a database that SHDatabase handles the creation and opening for you all the time and take all your focus to your applications logic, All you have to do is open it with just a name.
@@ -38,6 +38,7 @@ You can open a managed database by using:
 After Opening a database all you need to do is execute a command or query. Executing a query is just as simple as calling a function.you can execute a command(like creating a table or droping one) by using:
 
     [db execute:@"CREATE TABLE my_table (id integer PRIMARY KEY NOT NULL,name TEXT)"];
+    
 <h3>Query Execution</h3>
 If you want to execute a query (like a sql select statment) you have to keep the result in an object with the type of  "ResultSet" like the following line :
 
