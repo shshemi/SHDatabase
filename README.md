@@ -12,14 +12,17 @@ The example project that might help you understand how does the SHDatabase works
 You can create a sqlite database in memory by using:
 
     SHDatabase *database = [SHDatabase createAndOpenDatabaseInMemory];
-You can open (or copy and open if coping is needed) a pre loaded database from main bundle by using:
+<h3>Pre Filled Database</h3>
+You can open a pre filled database directly in main bundle by using:
 
     SHDatabase *db = [SHDatabase openDatabaseInMainBundleWithName:@"MyDatabase" andExtention:@"db"];
-or
+or you can use the following line to copy it to app directory and then open it:
 
     SHDatabase *db = [SHDatabase copyAndOpenDatabaseFromMainBundleWithName:@"MyDatabase" andExtention:@“db"];
-You can also open a managed database!<br/>
-A managed database is a database that SHDatabase handles the creating and opening for you all the time and you can focus on your applications logic, All you have to do is open it with just a name.
+<b>NOTE:</b>You cant change the database in main bundle, The main bundle directory is read only.
+<h3>Managed Database</h3>
+You can also try a managed database!<br/>
+A Managed Database is a database that SHDatabase handles the creation and opening for you all the time and take all your focus to your applications logic, All you have to do is open it with just a name.
 You can open a managed database by using:
 
     SHDatabase *db = [SHDatabase openOrCreateManagedDatabaseWithName:@"MyManagedDatabase" andInitBlock:^(SHDatabase *db) {
@@ -31,11 +34,12 @@ You can open a managed database by using:
         
         //and ...
     }];
-
+<h3>Command Execution</h3>
 After Opening a database all you need to do is execute a command or query. Executing a query is just as simple as calling a function.you can execute a command(like creating a table or droping one) by using:
 
     [db execute:@"CREATE TABLE my_table (id integer PRIMARY KEY NOT NULL,name TEXT)"];
-If you want to execute a query(like a select statment) you have to store the result.You can store it in an object called ResultSet like this:
+<h3>Query Execution</h3>
+If you want to execute a query (like a sql select statment) you have to keep the result in an object with the type of  "ResultSet" like the following line :
 
     SHResultSet *resultSet = [db execute:@"CREATE TABLE my_table (id integer PRIMARY KEY NOT NULL,name TEXT)"];
 After that you can access the query result like this:
@@ -63,7 +67,7 @@ You can access proper coulmn type like this:
      
     // id
     id unknownTyped = [resultSet valueForColumnIndex:index];
-    
+    <h3>Other ResultSet Features</h3>
 You can get name of each column by using:
 
     NSString *columnName = [resultSet columnNameForColumnIndex:index];
@@ -78,4 +82,4 @@ You can get the current row (record) dictionary by using:
     NSDictionary *dictionary = [resultSet dictionaryForCurrentRow];
 You can use the dictionary to create json or pass to a server
 
-Thanks for using SHDatabase
+Thanks for using <b>SHDatabase</b>
