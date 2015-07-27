@@ -1,5 +1,5 @@
 <h2>SHDatabase</h2><br/>
-<b>Sqlite Wrapper for Objective C</b>
+<h4>Sqlite Wrapper for Objective C</h4>
 SHDatabase is library written in Objective-C that lets you use sqlite database in convenient way.By using SHDatabase you’r no longer suppose to work with C library.
 <h3>Setup SHDatabase</h3>
 Drag and drop the SHDatabase.
