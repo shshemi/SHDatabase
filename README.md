@@ -68,7 +68,7 @@ You can access proper coulmn type like this:
      
     // id
     id unknownTyped = [resultSet valueForColumnIndex:index];
-    <h3>Other ResultSet Features</h3>
+<h3>Other ResultSet Features</h3>
 You can get name of each column by using:
 
     NSString *columnName = [resultSet columnNameForColumnIndex:index];
