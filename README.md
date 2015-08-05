@@ -4,6 +4,7 @@ SHDatabase is library written in Objective-C that lets you use sqlite database i
 <h3>Setup SHDatabase</h3>
 <h4>Pods</h4>
 Add the following line to your Podfile:
+
     pod 'SHDatabase', :git => 'https://github.com/shshemi/SHDatabase.git'
 <h4>Manually</h4>
 Drag and drop the SHDatabase.
