@@ -2,9 +2,13 @@
 <h4>Sqlite Wrapper for Objective C</h4>
 SHDatabase is library written in Objective-C that lets you use sqlite database in convenient way.By using SHDatabase you’r no longer suppose to work with C library.
 <h3>Setup SHDatabase</h3>
+<h4>Pods</h4>
+Add the following line to your Podfile:
+    pod 'SHDatabase', :git => 'https://github.com/shshemi/SHDatabase.git'
+<h4>Manually</h4>
 Drag and drop the SHDatabase.
 Add “libsqlite3.0.dylib” to your project.
-Now your ready to take off!
+All done,Thats it!
 <h3>Getting Started with Classes and Methods</h3>
 The example project that might help you understand how does the SHDatabase works. Some method and simple examples are also available here:
 
